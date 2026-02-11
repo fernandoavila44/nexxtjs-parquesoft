@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import ReloadButton from './ReloadButton';
 
 // Esta función obtiene datos en tiempo de BUILD (SSG)
 async function getStaticData() {
@@ -95,26 +96,34 @@ export default async function SSGDemo() {
                         </p>
                     </div>
 
+                    <div className="bg-red-50 dark:bg-red-900/20 border-l-4 border-red-400 p-4 mb-4">
+                        <h3 className="text-lg font-semibold text-red-800 dark:text-red-300 mb-2">
+                            ⚠️ IMPORTANTE: Estás en Modo Desarrollo
+                        </h3>
+                        <p className="text-gray-700 dark:text-gray-300 mb-2">
+                            En <strong>modo desarrollo</strong> (<code className="bg-red-100 dark:bg-red-900/40 px-2 py-1 rounded">npm run dev</code>),
+                            Next.js regenera las páginas en cada petición para que puedas ver tus cambios inmediatamente.
+                        </p>
+                        <p className="text-gray-700 dark:text-gray-300 mb-2">
+                            Por eso el tiempo de build <strong>SÍ cambia</strong> cuando recargas - esto NO es verdadero SSG.
+                        </p>
+                        <p className="text-gray-700 dark:text-gray-300">
+                            Para ver el <strong>verdadero comportamiento SSG</strong>, ejecuta:{' '}
+                            <code className="bg-red-100 dark:bg-red-900/40 px-2 py-1 rounded">npm run build</code> y luego{' '}
+                            <code className="bg-red-100 dark:bg-red-900/40 px-2 py-1 rounded">npm start</code>
+                        </p>
+                    </div>
+
                     <div className="bg-yellow-50 dark:bg-yellow-900/20 border-l-4 border-yellow-400 p-4 mb-6">
                         <h3 className="text-lg font-semibold text-yellow-800 dark:text-yellow-300 mb-2">
-                            🔍 Observa esto
+                            🔍 Prueba en Producción
                         </h3>
                         <p className="text-gray-700 dark:text-gray-300 mb-3">
-                            Recarga la página varias veces. Notarás que el tiempo de build NO cambia.
-                            Esto es porque el HTML se generó una sola vez durante el build y se reutiliza
+                            En modo producción, el tiempo de build NO cambiará al recargar.
+                            El HTML se genera una sola vez durante el build y se reutiliza
                             para todas las peticiones.
                         </p>
-                        <div className="flex gap-3">
-                            <button
-                                onClick={() => window.location.reload()}
-                                className="bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-2 px-4 rounded-lg transition-colors"
-                            >
-                                🔄 Recargar Página
-                            </button>
-                            <div className="flex items-center text-gray-700 dark:text-gray-300 text-sm">
-                                <span>El tiempo de build permanecerá igual ⚡</span>
-                            </div>
-                        </div>
+                        <ReloadButton />
                     </div>
                 </section>
 

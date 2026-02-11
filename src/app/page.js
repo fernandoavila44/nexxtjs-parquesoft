@@ -78,20 +78,53 @@ export default function Home() {
               </div>
             </Link>
 
-            {/* Placeholder for future classes */}
-            <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden border-2 border-dashed border-gray-300 dark:border-gray-600 opacity-60">
-              <div className="bg-gradient-to-br from-gray-400 to-gray-500 p-6 text-white">
-                <div className="text-4xl mb-2">🔒</div>
-                <h3 className="text-2xl font-bold mb-2">Clase 2</h3>
-                <p className="text-gray-100">Próximamente</p>
+            {/* Clase 2 */}
+            <Link href="/clase-2">
+              <div className="group bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border-2 border-transparent hover:border-purple-500 dark:hover:border-purple-400 cursor-pointer h-full">
+                <div className="bg-gradient-to-br from-purple-500 to-pink-600 p-6 text-white">
+                  <div className="text-4xl mb-2">📊</div>
+                  <h3 className="text-2xl font-bold mb-2">Clase 2</h3>
+                  <p className="text-purple-100">Data Fetching y Estado</p>
+                </div>
+                <div className="p-6">
+                  <h4 className="font-semibold text-gray-900 dark:text-white mb-3">
+                    Contenido:
+                  </h4>
+                  <ul className="space-y-2 text-gray-600 dark:text-gray-300 text-sm">
+                    <li className="flex items-start">
+                      <span className="text-purple-500 mr-2">✓</span>
+                      <span>Client vs Server Components</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-purple-500 mr-2">✓</span>
+                      <span>Patrones de Data Fetching</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-purple-500 mr-2">✓</span>
+                      <span>React Hooks (useState, useEffect, etc.)</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-purple-500 mr-2">✓</span>
+                      <span>Manejo de Estado Global</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-purple-500 mr-2">✓</span>
+                      <span>Proyecto: Todo App completa</span>
+                    </li>
+                  </ul>
+                  <div className="mt-6 flex items-center justify-between">
+                    <span className="text-sm font-semibold text-purple-600 dark:text-purple-400 group-hover:underline">
+                      Comenzar →
+                    </span>
+                    <span className="text-xs bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300 px-3 py-1 rounded-full">
+                      Disponible
+                    </span>
+                  </div>
+                </div>
               </div>
-              <div className="p-6">
-                <p className="text-gray-500 dark:text-gray-400 text-sm">
-                  Más contenido educativo estará disponible pronto...
-                </p>
-              </div>
-            </div>
+            </Link>
 
+            {/* Placeholder for future classes */}
             <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden border-2 border-dashed border-gray-300 dark:border-gray-600 opacity-60">
               <div className="bg-gradient-to-br from-gray-400 to-gray-500 p-6 text-white">
                 <div className="text-4xl mb-2">🔒</div>

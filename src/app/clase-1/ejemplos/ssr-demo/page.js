@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import ReloadButton from './ReloadButton';
 
 // Esta función obtiene datos en cada petición (SSR)
 async function getCurrentTime() {
@@ -127,12 +128,7 @@ export default async function SSRDemo() {
                             Presiona F5 o recarga la página para ver cómo los datos se actualizan en cada petición.
                             Esto demuestra que el HTML se genera en el servidor cada vez.
                         </p>
-                        <button
-                            onClick={() => window.location.reload()}
-                            className="bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-2 px-4 rounded-lg transition-colors"
-                        >
-                            🔄 Recargar Página
-                        </button>
+                        <ReloadButton />
                     </div>
                 </section>
 
