@@ -1,36 +1,78 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 📚 Curso de Next.js - Material Educativo (Parquesoft)
 
-## Getting Started
+Este repositorio contiene el material de estudio, código de ejemplo y proyectos prácticos para el **Curso de Next.js**. El objetivo de este proyecto es enseñar a construir aplicaciones web modernas utilizando Next.js desde sus fundamentos hasta conceptos avanzados de obtención de datos y manejo de estado.
 
-First, run the development server:
+El proyecto está estructurado de manera interactiva, permitiendo a los estudiantes explorar teoría y probar demostraciones funcionales en tiempo real para cada tema.
+
+---
+
+## 🛠️ Temáticas del Curso
+
+El curso está organizado en clases progresivas:
+
+### 🚀 Clase 1: Fundamentos de Next.js
+En esta clase se abordan los pilares fundamentales del framework utilizando el **App Router**:
+- **Sistema de Rutas basado en Archivos (File-based Routing):** Uso de `page.js` para páginas públicas, `layout.js` para vistas compartidas, rutas dinámicas mediante `[param]` y agrupación de rutas utilizando `(grupo)`.
+- **Layouts y Componentes Compartidos:** Jerarquías y cómo mantener el estado de la UI durante la navegación sin re-renderizados innecesarios.
+- **Server-Side Rendering (SSR):** Generación de HTML dinámico en el servidor por cada petición para datos que cambian frecuentemente.
+- **Static Site Generation (SSG):** Generación de HTML estático en tiempo de compilación para óptimo rendimiento y SEO.
+- **Incremental Static Regeneration (ISR):** Combinación de estático y dinámico mediante revalidación en intervalos de tiempo.
+
+*Ejemplos prácticos incluidos:*
+- [x] Rutas Dinámicas
+- [x] Demostración de SSR
+- [x] Demostración de SSG
+- [x] Layouts Anidados
+
+---
+
+### 📊 Clase 2: Data Fetching y Manejo de Estado
+Esta clase se enfoca en la interactividad, la comunicación con APIs y la administración de datos en la aplicación:
+- **Client vs Server Components:** Entendimiento profundo del renderizado híbrido de Next.js, cuándo usar la directiva `'use client'` y cómo minimizar el bundle de JavaScript en el cliente.
+- **Patrones de Data Fetching:** Obtención de datos en paralelo (`Promise.all`) versus secuencial, y control de errores en las peticiones.
+- **React Hooks en Next.js:** Uso de hooks estándar de React (`useState`, `useEffect`) y hooks de enrutamiento de Next.js (`useRouter`, `useSearchParams`).
+- **Manejo de Estado:** Estrategias de estado Local, Compartido (Props), Global (Context API) y de Servidor (Caching y revalidación).
+
+*Ejemplos prácticos y proyectos incluidos:*
+- [x] Comparación interactiva de Client vs Server Components
+- [x] Patrones de Data Fetching en acción
+- [x] Demostración de React Hooks
+- [x] Gestión de Estado Global mediante Context API
+- [x] **Proyecto Práctico: Todo App** (Aplicación de tareas completa con CRUD, filtrados y persistencia en LocalStorage)
+
+---
+
+### 🔒 Próximas Clases
+- **Clase 3 (Próximamente):** Optimización, carga de archivos, despliegue y prácticas recomendadas en producción.
+
+---
+
+## 🚀 Cómo Empezar
+
+### Requisitos Previos
+Asegúrate de tener instalado [Node.js](https://nodejs.org/) (versión 18 o superior recomendada).
+
+### Instalación de Dependencias
+Clona este repositorio e instala los paquetes necesarios:
+
+```bash
+npm install
+# o
+yarn install
+# o
+pnpm install
+```
+
+### Ejecutar Servidor de Desarrollo
+Para iniciar la aplicación en modo desarrollo, ejecuta:
 
 ```bash
 npm run dev
-# or
+# o
 yarn dev
-# or
+# o
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abre [http://localhost:3000](http://localhost:3000) en tu navegador para ver la interfaz interactiva y comenzar el aprendizaje.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
